@@ -1,0 +1,334 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@keyframes comeInDownWard {
+  0% {
+    transform: translateY(500px);
+    opacity: 1%;
+  }
+
+  50% {
+    opacity: 4%;
+  }
+
+  70% {
+    opacity: 8%;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 100%;
+  }
+}
+
+@keyframes fromTheRight {
+  0% {
+    transform: translateX(500px);
+    opacity: 1%;
+  }
+}
+
+html {
+  max-width: 1440px;
+  width: 100%;
+  font-family: sans-serif;
+  margin: 0 auto;
+  /* overflow-x: hidden; */
+}
+
+.header {
+  background-color: #068ba0;
+  color: #f4f4f4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  width: 100%;
+}
+
+nav {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 2rem;
+}
+
+nav li a {
+    text-decoration: none;
+    color: #f4f4f4;
+}
+
+nav button {
+  background-color: transparent;
+  border: 2px solid #e9bf16;
+  color: #e9bf16;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+}
+
+.mainHeader {
+  background-color: #057a8d;
+  color: #f4f4f4;
+  text-align: center;
+  display: grid;
+  padding: 2rem;
+  grid-template-columns: 50% 50%;
+  gap: 2rem;
+  border-radius: 0 0 2rem 2rem;
+  box-sizing: border-box;
+}
+
+.mainHeaderDetails h1 {
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.mainHeaderDetails {
+  animation: comeInDownWard 3s;
+}
+
+.mainHeaderDetails button {
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  border: none;
+  margin-top: 2rem;
+  border: 2px solid #e9bf16;
+  background: transparent;
+  color: #e9bf16;
+  font-size: 1rem;
+}
+
+.mainHeaderDetails .digital {
+  text-align: center;
+}
+
+.mainHeaderImage {
+  padding: 2rem;
+  animation: fromTheRight 3s;
+}
+
+.mainHeaderOnes {
+  margin-top: 9rem;
+}
+
+.mainHeaderImage img {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 2rem;
+}
+
+.about {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 7rem;
+  margin-bottom: 2rem;
+}
+
+.about h2 {
+  text-align: center;
+  color: #068ba0;
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+strong {
+  color: #e9bf16;
+  font-size: 2rem;
+}
+
+.about p {
+  font-size: 1.5rem;
+  color: gray;
+  text-align: justify;
+}
+
+.aboutDetails {
+  margin-top: 3rem;
+}
+
+.key {
+  margin-top: 15rem;
+  padding: 2rem;
+  box-sizing: border-box;
+  background-color: rgba(234, 234, 247, 0.447);
+}
+
+.key h4 {
+  text-align: center;
+  color: #068ba0;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.allFeatures {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-top: 3rem;
+    gap: 1rem;
+    box-sizing: border-box;
+}
+
+.keyFeatureImage {
+    padding: 1rem;
+}
+.keyFeatureImage img {
+    width: 100%;
+    border-radius: 2rem;
+}
+
+.keyFeatureDetails {
+    margin-top: 5rem;
+}
+
+.keyFeatureDetails p{
+    font-size: 1.2rem;
+  color: gray;
+  text-align: justify;
+}
+
+
+.secondP, .thirdP {
+    margin-top: 1rem;
+}
+
+footer {
+    background: rgb(21, 21, 21);
+    padding: 3rem;
+}
+
+footer h2 {
+    color: gray;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+footer p {
+    text-align: center;
+    margin-top: 1rem;
+    color: gray;
+}
+
+footer img{
+    border-radius: 50%;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+/* Working on responsive designs for mobile devices */
+
+@media (max-width:1240px) {
+    .mainHeaderDetails h1{
+        font-size: 1.5rem;
+    }
+
+    .mainHeaderOnes .digital {
+        text-align: left;
+    }
+}
+
+@media (max-width:1070px) {
+    .keyFeatureDetails {
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width:1060px) {
+    .about {
+        padding: 2rem;
+    }
+}
+
+@media (max-width:1000px) {
+    .thirdP {
+        display: none;
+    }
+
+    .keyFeatureDetails {
+        margin-top: 4rem;
+    }
+}
+
+@media (max-width:900px) {
+
+    .header {
+        position: fixed;
+    }
+    .mainHeader {
+        grid-template-columns: 100%;
+    }
+
+    .mainHeaderDetails h1 {
+        text-align: center;
+        font-size: 2.5rem;
+    }
+
+    .mainHeaderOnes .digital {
+        text-align: center;
+    }
+
+    .allFeatures {
+        grid-template-columns: 100%;
+    }
+
+    .thirdP{
+        display: block;
+    }
+}
+
+@media (max-width:810px) {
+    nav{
+        display: none;
+    }
+
+    .header {
+        display: block;
+    }
+
+    .header h1 {
+        text-align: center;
+    }
+
+    .key {
+        margin-top: 2rem;
+    }
+
+    .mainHeaderImage {
+        padding: 0;
+    }
+
+    .keyFeatureImage {
+        padding: 0;
+        
+    }
+
+    .keyFeatureImage img {
+        border-radius: 0;
+    }
+
+    .mainHeaderImage img {
+        border-radius: 0;
+        width: 100%;
+    }
+
+    .thirdP {
+        display: none;
+    }
+
+    .we {
+        display: none;
+    }
+}
